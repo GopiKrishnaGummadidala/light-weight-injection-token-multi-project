@@ -246,6 +246,76 @@
           }
         }
       }
+    },
+    "lib-shared-ui-one": {
+      "projectType": "library",
+      "root": "projects/lib-shared-ui-one",
+      "sourceRoot": "projects/lib-shared-ui-one/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/lib-shared-ui-one/tsconfig.lib.json",
+            "project": "projects/lib-shared-ui-one/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/lib-shared-ui-one/src/test.ts",
+            "tsConfig": "projects/lib-shared-ui-one/tsconfig.spec.json",
+            "karmaConfig": "projects/lib-shared-ui-one/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/lib-shared-ui-one/tsconfig.lib.json",
+              "projects/lib-shared-ui-one/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "lib-shared-ui-two": {
+      "projectType": "library",
+      "root": "projects/lib-shared-ui-two",
+      "sourceRoot": "projects/lib-shared-ui-two/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/lib-shared-ui-two/tsconfig.lib.json",
+            "project": "projects/lib-shared-ui-two/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/lib-shared-ui-two/src/test.ts",
+            "tsConfig": "projects/lib-shared-ui-two/tsconfig.spec.json",
+            "karmaConfig": "projects/lib-shared-ui-two/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/lib-shared-ui-two/tsconfig.lib.json",
+              "projects/lib-shared-ui-two/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "demo-app-one"
 }
