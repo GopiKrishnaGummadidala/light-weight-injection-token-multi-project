@@ -1,6 +1,6 @@
 import { Component, InjectionToken, OnInit } from "@angular/core";
 
-export const Header_Token = new InjectionToken<WidgetHeaderComponent>(
+export const HEADER_TOKEN = new InjectionToken<WidgetHeaderComponent>(
   "widget-header"
 );
 
@@ -10,7 +10,7 @@ export const Header_Token = new InjectionToken<WidgetHeaderComponent>(
   styleUrls: ["./widget-header.component.scss"],
   providers: [
     {
-      provide: Header_Token,
+      provide: HEADER_TOKEN,
       useExisting: WidgetHeaderComponent,
     },
   ],
