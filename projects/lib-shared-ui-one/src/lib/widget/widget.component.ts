@@ -1,5 +1,5 @@
 import { Component, ContentChild, OnInit } from "@angular/core";
-import { WidgetHeaderComponent } from "../widget-header/widget-header.component";
+import { HeaderToken } from "../widget-header/widget-header.component";
 
 @Component({
   selector: "lib-widget",
@@ -7,8 +7,8 @@ import { WidgetHeaderComponent } from "../widget-header/widget-header.component"
   styleUrls: ["./widget.component.scss"],
 })
 export class WidgetComponent implements OnInit {
-  @ContentChild(WidgetHeaderComponent, { static: true })
-  headerComponent: WidgetHeaderComponent | null = null;
+  @ContentChild(HeaderToken, { static: true })
+  headerComponent: HeaderToken | null = null;
   constructor() {}
 
   ngOnInit() {}
